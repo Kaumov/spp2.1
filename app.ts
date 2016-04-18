@@ -24,7 +24,8 @@ var bTimeData = new Uint8Array(analyser.frequencyBinCount);
         filterNode.connect(context.destination);
         //osc.connect(context.destination);
         osc.start();
-        printAnalyser();
+       printAnalyser();
+		
     }
 
     function printAnalyser(){
@@ -37,6 +38,9 @@ var bTimeData = new Uint8Array(analyser.frequencyBinCount);
 
   function stop() {
         osc.stop();
+		osc.stop();
+		osc.stop();
+		osc.stop();
 		location.reload()
     }
 function changeParam(paramName, target) {
@@ -98,6 +102,7 @@ function changeFilter2(target){
     stop() {
         clearTimeout(this.timerToken);
 		location.reload()
+	
     }
 
 }
